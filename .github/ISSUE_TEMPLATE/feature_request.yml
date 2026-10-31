@@ -1,0 +1,36 @@
+name: Feature request
+description: Suggest an improvement to Accurate Page Count
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem you want to solve, not only the implementation you
+        have in mind. Examples from real books are especially helpful.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is difficult or inaccurate today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How would you like the plugin to behave?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other approaches or workarounds you have tried.
+  - type: textarea
+    id: examples
+    attributes:
+      label: Example books or formats
+      description: |
+        Which EPUB/PDF layouts or pagination styles does this affect? Do not
+        attach copyrighted books.

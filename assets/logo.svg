@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Accurate Page Count</title>
+  <desc id="desc">A white page with a ruled edge and the page number 42 on a blue rounded square.</desc>
+
+  <defs>
+    <linearGradient id="background-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1B4F7A"/>
+      <stop offset="1" stop-color="#0D75C4"/>
+    </linearGradient>
+  </defs>
+
+  <g id="background">
+    <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#background-gradient)"/>
+  </g>
+
+  <g id="page">
+    <path d="M132 84 H340 L384 128 V428 H132 Z" fill="#FFFFFF"/>
+    <path d="M340 84 L384 128 H340 Z" fill="#D8E7F4"/>
+    <path d="M340 84 L384 128" fill="none" stroke="#AFCBE3" stroke-width="5"/>
+  </g>
+
+  <g id="ruler">
+    <rect x="132" y="84" width="54" height="344" fill="#F2A93B"/>
+    <g stroke="#173B60" stroke-width="8" stroke-linecap="square">
+      <path d="M132 120 H174"/>
+      <path d="M132 176 H154"/>
+      <path d="M132 232 H174"/>
+      <path d="M132 288 H154"/>
+      <path d="M132 344 H174"/>
+      <path d="M132 400 H154"/>
+    </g>
+  </g>
+
+  <!-- Numerals outlined from Archivo Black (SIL OFL 1.1). -->
+  <g id="number" fill="#1F8A5B">
+    <path transform="translate(192.930 304) scale(0.135000 -0.135000)" d="M160 288H358V431Q389 475 421.0 535.0Q453 595 463 634H548V288H644V141H548V0H358V141H23V290Q77 368 130.0 479.0Q183 590 215 700H411Q404 648 363.0 570.5Q322 493 265.5 415.5Q209 338 160 288Z"/>
+    <path transform="translate(287.025 304) scale(0.135000 -0.135000)" d="M611 493Q611 435 582.0 388.0Q553 341 509.0 305.0Q465 269 388 217Q345 189 318 169H619V0H49V48Q49 101 73.5 142.5Q98 184 145 226Q193 268 283 340Q355 397 384.0 427.0Q413 457 413 486Q413 517 391.5 538.0Q370 559 327 559Q282 559 256.0 533.0Q230 507 230 465V445H52Q51 453 51 467Q51 575 126.5 637.5Q202 700 346 700Q427 700 486.5 674.5Q546 649 578.5 602.0Q611 555 611 493Z"/>
+  </g>
+</svg>

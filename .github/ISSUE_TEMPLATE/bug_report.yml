@@ -1,0 +1,87 @@
+name: Bug report
+description: Report a counting problem or another bug in Accurate Page Count
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please do not attach copyrighted books.
+        A minimal EPUB built with `tests/epub_fixtures.py`, or a description of
+        the book's pagination markup, is usually enough.
+  - type: input
+    id: calibre-version
+    attributes:
+      label: Calibre version
+      placeholder: "9.0.0"
+    validations:
+      required: true
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Accurate Page Count version
+      description: Shown in Preferences -> Plugins.
+      placeholder: "0.3.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: column
+    attributes:
+      label: Target column
+      description: The custom integer column, for example #pages.
+      placeholder: "#pages"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you do before the problem occurred?
+      placeholder: |
+        1. Select a book with ...
+        2. Choose Count pages for selected books
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: What page count did you expect, and why?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: What did the plugin report?
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Completion dialog or debug output
+      description: |
+        Paste the summary shown when counting finishes and any traceback from
+        Calibre's job details. Remove personal file paths if necessary.
+      render: text
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues before opening this report.
+          required: true
+        - label: I am not attaching a copyrighted book.
+          required: true
