@@ -18,7 +18,7 @@ class TruePageCalibrePlugin(InterfaceActionBase):
     )
     supported_platforms = ['windows', 'osx', 'linux']
     author = 'oatlayers'
-    version = (0, 3, 0)
+    version = (0, 4, 0)
     minimum_calibre_version = (6, 0, 0)
     actual_plugin = (
         'calibre_plugins.accurate_page_count.action:TruePageCalibreAction'

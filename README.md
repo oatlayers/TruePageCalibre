@@ -5,6 +5,7 @@
 # TruePageCalibre
 
 [![Tests](https://github.com/oatlayers/TruePageCalibre/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/oatlayers/TruePageCalibre/actions/workflows/tests.yml)
+[![Latest release](https://img.shields.io/github/v/release/oatlayers/TruePageCalibre)](https://github.com/oatlayers/TruePageCalibre/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 A standalone Calibre plugin that stores page counts in an integer custom

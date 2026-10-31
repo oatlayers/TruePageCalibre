@@ -21,7 +21,7 @@ body:
     attributes:
       label: TruePageCalibre version
       description: Shown in Preferences -> Plugins.
-      placeholder: "0.3.0"
+      placeholder: "0.4.0"
     validations:
       required: true
   - type: dropdown
