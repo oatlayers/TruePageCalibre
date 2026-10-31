@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for considering a contribution to Accurate Page Count. This is a small
+Thanks for considering a contribution to TruePageCalibre. This is a small
 Calibre plugin, and focused bug reports and pull requests are very welcome.
 
 ## Reporting bugs
@@ -8,7 +8,7 @@ Calibre plugin, and focused bug reports and pull requests are very welcome.
 Please include:
 
 - your Calibre version and operating system;
-- the Accurate Page Count version (shown in **Preferences → Plugins**);
+- the TruePageCalibre version (shown in **Preferences → Plugins**);
 - the target custom column and its type;
 - the source reported in the completion dialog (for example `print-page-list`
   or `estimate-eng`);
@@ -67,7 +67,7 @@ calibre-debug -e run_tests.py
 python build_plugin.py
 ```
 
-This writes `dist/accurate_page_count.zip`. The ZIP is a build artifact and is
+This writes `dist/TruePageCalibre.zip`. The ZIP is a build artifact and is
 ignored by git. Do not commit it.
 
 ## Code guidelines

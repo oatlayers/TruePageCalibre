@@ -32,7 +32,7 @@ def _install_plugin_alias():
 
 try:
     _install_plugin_alias()
-    from calibre_plugins.accurate_page_count.action import AccuratePageCountAction
+    from calibre_plugins.accurate_page_count.action import TruePageCalibreAction
     HAVE_CALIBRE = True
 except Exception:  # pragma: no cover - depends on the environment
     HAVE_CALIBRE = False
@@ -49,7 +49,7 @@ class _Stub:
 
 
 def split(tasks, workers):
-    return AccuratePageCountAction._split_tasks(_Stub(workers), tasks)
+    return TruePageCalibreAction._split_tasks(_Stub(workers), tasks)
 
 
 def make_tasks(count):

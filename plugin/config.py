@@ -1,4 +1,4 @@
-"""Configuration dialog for Accurate Page Count."""
+"""Configuration dialog for TruePageCalibre."""
 
 from qt.core import (
     QCheckBox, QComboBox, QFormLayout, QHBoxLayout, QLabel, QPushButton,
@@ -13,6 +13,8 @@ from calibre_plugins.accurate_page_count.core import (
 )
 
 
+# Keep the legacy config path so existing users keep their settings and
+# calibration after the product rename.
 prefs = JSONConfig('plugins/accurate_page_count')
 prefs.defaults.update({
     'column': '#pages',
@@ -71,7 +73,7 @@ class ConfigWidget(QWidget):
         layout = QVBoxLayout(self)
 
         intro = QLabel(
-            'Accurate Page Count prefers a book\'s embedded print pagination '
+            'TruePageCalibre prefers a book\'s embedded print pagination '
             '(EPUB page-list, NCX page-map, Adobe page-map or pagebreak '
             'markers) and otherwise estimates from the text using a '
             'language-aware characters-per-page value.'

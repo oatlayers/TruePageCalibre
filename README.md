@@ -1,8 +1,11 @@
 <p align="center">
-  <img src="assets/logo.svg" width="120" height="120" alt="Accurate Page Count icon">
+  <img src="assets/logo.svg" width="120" height="120" alt="TruePageCalibre icon">
 </p>
 
-# Accurate Page Count
+# TruePageCalibre
+
+[![Tests](https://github.com/oatlayers/TruePageCalibre/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/oatlayers/TruePageCalibre/actions/workflows/tests.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 A standalone Calibre plugin that stores page counts in an integer custom
 column. It is designed for mixed language libraries where a single
@@ -17,8 +20,8 @@ column. It is designed for mixed language libraries where a single
 
 ## Quick start
 
-1. Download `accurate_page_count.zip` from the latest release, or build it
-   from source (see [Installation](#installation)).
+1. Download `TruePageCalibre.zip` from the latest release, or build it from
+   source (see [Installation](#installation)).
 2. In Calibre, open **Preferences → Plugins → Load plugin from file**, select
    the ZIP and restart Calibre.
 3. Add the **Count pages** action to the toolbar, then choose
@@ -136,13 +139,15 @@ not trusted the calibrated text estimate is used instead.
 
 ## Installation
 
-1. Build the plugin ZIP from source (or download a release ZIP when one is
-   available):
+1. Clone the repository and build the plugin ZIP (or download a release ZIP
+   when one is available):
    ```powershell
+   git clone https://github.com/oatlayers/TruePageCalibre.git
+   cd TruePageCalibre
    python build_plugin.py
    ```
-   This produces `dist/accurate_page_count.zip`. The ZIP must contain
-   `plugin-import-name-accurate_page_count.txt`, that file is what makes
+   This produces `dist/TruePageCalibre.zip`. The ZIP must contain
+   `plugin-import-name-accurate_page_count.txt`; that file is what makes
    `calibre_plugins.accurate_page_count` importable. The ZIP is a build
    artifact and is not tracked by git.
 2. In Calibre: **Preferences → Plugins → Load plugin from file**.
@@ -152,11 +157,13 @@ not trusted the calibrated text estimate is used instead.
 5. Right-click the action for:
    - Count pages for selected books
    - Count pages for all books
-   - Configure Accurate Page Count
+   - Configure TruePageCalibre
 
 The default target column is `#pages`. You can choose any integer custom
 column in the configuration dialog. To upgrade, load the new ZIP and restart
-Calibre; the configuration and stored calibration are kept.
+Calibre; the configuration and stored calibration are kept. The internal
+plugin import name and settings path remain `accurate_page_count` for
+compatibility with existing installations.
 
 ## Recommended workflow
 
@@ -193,11 +200,12 @@ Calibre; the configuration and stored calibration are kept.
   - `config.py` — settings dialog
   - `images/page.png` — 128 px toolbar icon exported from the logo
   - `plugin-import-name-accurate_page_count.txt` — Calibre plugin marker
+    (legacy name kept for compatibility)
 - `assets/logo.svg` — master logo and icon artwork
 - `assets/logo.png` — 512 px export for documentation and listings
 - `tests/` — pure and Calibre-backed tests
 - `tests/epub_fixtures.py` — generates the EPUB files used by the Calibre tests
-- `build_plugin.py` — builds `dist/accurate_page_count.zip`
+- `build_plugin.py` — builds `dist/TruePageCalibre.zip`
 - `run_tests.py` — test runner for plain Python or `calibre-debug`
 - `.github/workflows/tests.yml` — CI: unit tests and plugin build
 - `CONTRIBUTING.md` — development and pull request guidelines

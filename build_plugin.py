@@ -4,9 +4,10 @@ Usage::
 
     python build_plugin.py
 
-The installable ZIP is written to ``dist/accurate_page_count.zip``. The
-contents of ``plugin/`` form the root of that ZIP; ``LICENSE`` is added from
-the repository root.
+The installable ZIP is written to ``dist/TruePageCalibre.zip``. The contents
+of ``plugin/`` form the root of that ZIP; ``LICENSE`` is added from the
+repository root. The plugin import marker keeps the legacy
+``accurate_page_count`` name so existing installations keep working.
 """
 
 from pathlib import Path
@@ -14,7 +15,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parent
 PLUGIN_DIR = ROOT / 'plugin'
-OUTPUT = ROOT / 'dist' / 'accurate_page_count.zip'
+OUTPUT = ROOT / 'dist' / 'TruePageCalibre.zip'
 
 PLUGIN_FILES = (
     '__init__.py',

@@ -40,6 +40,6 @@ jobs:
       - name: Upload plugin ZIP
         uses: actions/upload-artifact@v4
         with:
-          name: accurate-page-count-plugin
-          path: dist/accurate_page_count.zip
+          name: truepagecalibre-plugin
+          path: dist/TruePageCalibre.zip
           if-no-files-found: error

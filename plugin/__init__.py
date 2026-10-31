@@ -1,10 +1,15 @@
-"""Calibre plugin definition for Accurate Page Count."""
+"""Calibre plugin definition for TruePageCalibre.
+
+The import package and configuration path keep the legacy
+``accurate_page_count`` name so existing installations and settings survive
+the product rename.
+"""
 
 from calibre.customize import InterfaceActionBase
 
 
-class AccuratePageCountPlugin(InterfaceActionBase):
-    name = 'Accurate Page Count'
+class TruePageCalibrePlugin(InterfaceActionBase):
+    name = 'TruePageCalibre'
     description = (
         'Counts print pages from an EPUB\'s embedded pagination (page-list, '
         'NCX page-map, Adobe page-map or pagebreaks) when available, otherwise '
@@ -16,7 +21,7 @@ class AccuratePageCountPlugin(InterfaceActionBase):
     version = (0, 3, 0)
     minimum_calibre_version = (6, 0, 0)
     actual_plugin = (
-        'calibre_plugins.accurate_page_count.action:AccuratePageCountAction'
+        'calibre_plugins.accurate_page_count.action:TruePageCalibreAction'
     )
 
     def is_customizable(self):

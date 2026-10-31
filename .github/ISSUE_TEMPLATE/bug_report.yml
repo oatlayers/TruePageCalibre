@@ -1,5 +1,5 @@
 name: Bug report
-description: Report a counting problem or another bug in Accurate Page Count
+description: Report a counting problem or another bug in TruePageCalibre
 title: "[Bug]: "
 labels: ["bug"]
 body:
@@ -19,7 +19,7 @@ body:
   - type: input
     id: plugin-version
     attributes:
-      label: Accurate Page Count version
+      label: TruePageCalibre version
       description: Shown in Preferences -> Plugins.
       placeholder: "0.3.0"
     validations:

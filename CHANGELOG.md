@@ -15,6 +15,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Renamed the project to TruePageCalibre. The Calibre plugin import name and
+  settings path remain `accurate_page_count`, so existing settings and
+  calibration are preserved.
 - Source files now live under `plugin/`, brand artwork under `assets/`, and
   the built ZIP is written to `dist/`.
 

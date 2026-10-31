@@ -1,4 +1,4 @@
-"""Calibre interface action for Accurate Page Count."""
+"""Calibre interface action for TruePageCalibre."""
 
 import os
 
@@ -14,9 +14,9 @@ from calibre_plugins.accurate_page_count.core import (
 )
 
 
-class AccuratePageCountAction(InterfaceAction):
+class TruePageCalibreAction(InterfaceAction):
 
-    name = 'Accurate Page Count'
+    name = 'TruePageCalibre'
     action_spec = (
         'Count pages',
         'images/page.png',
@@ -32,7 +32,7 @@ class AccuratePageCountAction(InterfaceAction):
         self.menu.addAction('Count pages for selected books', self.count_selected)
         self.menu.addAction('Count pages for all books', self.count_all)
         self.menu.addSeparator()
-        self.menu.addAction('Configure Accurate Page Count...', self.configure)
+        self.menu.addAction('Configure TruePageCalibre...', self.configure)
         self.qaction.setMenu(self.menu)
 
     def _load_icon(self):
@@ -67,11 +67,11 @@ class AccuratePageCountAction(InterfaceAction):
         db = self.gui.current_db
         book_ids = list(db.new_api.all_book_ids())
         if not book_ids:
-            return info_dialog(self.gui, 'Accurate Page Count',
+            return info_dialog(self.gui, 'TruePageCalibre',
                                'The library has no books.', show=True)
         answer = QMessageBox.question(
             self.gui,
-            'Accurate Page Count',
+            'TruePageCalibre',
             'Count pages for all %d books in this library?' % len(book_ids),
             QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
             QMessageBox.StandardButton.No,
@@ -186,7 +186,7 @@ class AccuratePageCountAction(InterfaceAction):
 
         if not tasks:
             return info_dialog(
-                self.gui, 'Accurate Page Count',
+                self.gui, 'TruePageCalibre',
                 'No selected books have a readable EPUB or PDF format.',
                 show=True,
             )
@@ -211,7 +211,7 @@ class AccuratePageCountAction(InterfaceAction):
                     self.Dispatcher(self._count_done),
                     'arbitrary_n',
                     args=args,
-                    description='Accurate Page Count (%d books)' % len(chunk),
+                    description='TruePageCalibre (%d books)' % len(chunk),
                 )
             except Exception:
                 # The batch was never started, so no callback will arrive for
@@ -410,7 +410,7 @@ class AccuratePageCountAction(InterfaceAction):
 
         if not prefs['show_report'] and not errors and not self._failed_jobs:
             self.gui.status_bar.show_message(
-                'Accurate Page Count: updated %d books.' % len(updates), 5000)
+                'TruePageCalibre: updated %d books.' % len(updates), 5000)
             return
 
         if errors or self._failed_jobs:
@@ -428,13 +428,13 @@ class AccuratePageCountAction(InterfaceAction):
                 if log.strip():
                     details.append(log.strip()[-2000:])
             return warning_dialog(
-                self.gui, 'Accurate Page Count finished with errors',
+                self.gui, 'TruePageCalibre finished with errors',
                 '\n'.join(lines),
                 det_msg='\n'.join(details),
                 show=True,
             )
         return info_dialog(
-            self.gui, 'Accurate Page Count',
+            self.gui, 'TruePageCalibre',
             '\n'.join(lines),
             show=True,
         )
